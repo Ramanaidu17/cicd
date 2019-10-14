@@ -7,6 +7,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="90524d72-73ea-4155-8263-f37cc6700358" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="66d87f8c-330e-48b2-b6e4-7585ec64301c" file="application.properties" />
 	<flow name="cicdFlow" doc:id="13877a7d-6570-4e1f-bb0c-d2c8ce447d44" >
 		<http:listener doc:name="Listener" doc:id="eb2b45ba-aa34-43a6-a57e-873afa33b895" config-ref="HTTP_Listener_config" path="/cicd"/>
 		<set-payload value='#["first sample project"]' doc:name="Set Payload" doc:id="b9fd53f5-8f4e-49a5-a5c6-30e2dad75d93" />
